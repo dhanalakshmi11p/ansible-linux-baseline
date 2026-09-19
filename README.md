@@ -59,7 +59,7 @@ Run only one part with tags: `--tags users` or `--tags ssh`.
 ```bash
 sudo sshd -T | grep -Ei 'permitrootlogin|x11forwarding|maxauthtries|clientalive'
 cat /etc/ssh/sshd_config.d/00-hardening.conf
-test1
+id test1
 sudo chage -l test1 | grep Maximum
 ```
 
