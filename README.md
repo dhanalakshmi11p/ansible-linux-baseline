@@ -1,6 +1,6 @@
 # ansible-linux-baseline
 
-[![CI](https://github.com/YOUR-USERNAME/ansible-linux-baseline/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/ansible-linux-baseline/actions)
+[![CI](https://github.com/dhanalakshmi11p/ansible-linux-baseline/actions/workflows/ci.yml/badge.svg)](https://github.com/dhanalakshmi11p/ansible-linux-baseline/actions)
 
 Reusable Ansible roles that create users and harden SSH on Linux servers.
 Built to replace repetitive, ticket-driven tasks with playbooks that are safe to
@@ -42,7 +42,7 @@ Tested on: _add your test VM's OS here, for example RHEL 9.3_
 ## Quick start
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/ansible-linux-baseline.git
+git clone https://github.com/dhanalakshmi11p/ansible-linux-baseline.git
 cd ansible-linux-baseline
 
 cp inventory/hosts.example.ini inventory/hosts.ini   # put your test VM here
