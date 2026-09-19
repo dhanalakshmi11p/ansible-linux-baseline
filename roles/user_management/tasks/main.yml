@@ -1,0 +1,12 @@
+---
+- name: Manage baseline users
+  ansible.builtin.user:
+    name: "{{ item.name }}"
+    groups: "{{ item.groups | default([]) | join(',') }}"
+    append: true
+    state: "{{ item.state | default('present') }}"
+    password_expire_max: "{{ user_management_password_max_days if (item.state | default('present')) == 'present' else omit }}"
+    remove: "{{ (item.state | default('present')) == 'absent' }}"
+  loop: "{{ user_management_users }}"
+  loop_control:
+    label: "{{ item.name }}"

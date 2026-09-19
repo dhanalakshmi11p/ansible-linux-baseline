@@ -1,0 +1,4 @@
+---
+# Each user: name (required), groups (optional list), state (present/absent)
+user_management_users: []
+user_management_password_max_days: 90
