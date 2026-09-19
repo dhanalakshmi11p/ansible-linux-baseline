@@ -60,7 +60,7 @@ Run only one part with tags: `--tags users` or `--tags ssh`.
 sudo sshd -T | grep -Ei 'permitrootlogin|x11forwarding|maxauthtries|clientalive'
 cat /etc/ssh/sshd_config.d/00-hardening.conf
 test1
-sudo chage -l opsuser | grep Maximum
+sudo chage -l test1 | grep Maximum
 ```
 
 Expected SSH values after a run with the default settings:
@@ -92,7 +92,7 @@ Example user list in `group_vars/all.yml`:
 
 ```yaml
 user_management_users:
-  - name: opsuser
+  - name: test1
     groups: [wheel]      # use [sudo] on Debian/Ubuntu
     state: present
   - name: olduser
