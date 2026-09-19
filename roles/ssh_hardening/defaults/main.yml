@@ -1,0 +1,21 @@
+---
+ssh_hardening_config_path: /etc/ssh/sshd_config
+ssh_hardening_dropin_dir: /etc/ssh/sshd_config.d
+ssh_hardening_service_name: "{{ 'ssh' if ansible_facts['os_family'] == 'Debian' else 'sshd' }}"
+
+# Set ssh_hardening_password_authentication to "no" only after SSH keys work,
+# or you can lock yourself out of the server.
+ssh_hardening_permit_root_login: "no"
+ssh_hardening_password_authentication: "yes"
+ssh_hardening_max_auth_tries: 4
+ssh_hardening_x11_forwarding: "no"
+ssh_hardening_client_alive_interval: 300
+ssh_hardening_client_alive_count_max: 2
+
+ssh_hardening_settings:
+  PermitRootLogin: "{{ ssh_hardening_permit_root_login }}"
+  PasswordAuthentication: "{{ ssh_hardening_password_authentication }}"
+  MaxAuthTries: "{{ ssh_hardening_max_auth_tries }}"
+  X11Forwarding: "{{ ssh_hardening_x11_forwarding }}"
+  ClientAliveInterval: "{{ ssh_hardening_client_alive_interval }}"
+  ClientAliveCountMax: "{{ ssh_hardening_client_alive_count_max }}"

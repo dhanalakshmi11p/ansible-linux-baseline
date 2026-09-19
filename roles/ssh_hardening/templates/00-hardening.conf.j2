@@ -1,0 +1,5 @@
+# Managed by Ansible (ansible-linux-baseline) - do not edit by hand.
+# Named 00- so it is read first; sshd uses the first value it finds.
+{% for name, value in ssh_hardening_settings.items() %}
+{{ name }} {{ value }}
+{% endfor %}
