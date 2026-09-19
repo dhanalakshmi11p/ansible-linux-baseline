@@ -1,0 +1,6 @@
+*.retry
+inventory/hosts.ini
+*.swp
+.DS_Store
+.ansible/
+*.bak
