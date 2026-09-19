@@ -1,0 +1,9 @@
+---
+# Site-wide overrides. Everything here is optional; role defaults are safe.
+ssh_hardening_permit_root_login: "no"
+ssh_hardening_password_authentication: "yes"   # set to "no" once SSH keys are in place
+
+user_management_users:
+  - name: test1
+    groups: [wheel]   # use [sudo] on Debian/Ubuntu
+    state: present

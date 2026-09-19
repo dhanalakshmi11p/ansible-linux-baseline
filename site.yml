@@ -1,0 +1,9 @@
+---
+- name: Apply Linux security baseline
+  hosts: linux_servers
+  become: true
+  roles:
+    - role: user_management
+      tags: [users]
+    - role: ssh_hardening
+      tags: [ssh]
