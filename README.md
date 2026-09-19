@@ -111,12 +111,11 @@ user_management_users:
 Every push runs `yamllint`, `ansible-lint` and a playbook syntax check through
 GitHub Actions. Locally:
 
-The script - ./scripts/validate.sh is the read-only check and can be run at any time.
-
 ```bash
 pip install ansible-core ansible-lint yamllint
 yamllint . && ansible-lint
 ```
+The script - ./scripts/validate.sh is the read-only check and can be run at any time.
 
 ## Ideas for next steps
 
